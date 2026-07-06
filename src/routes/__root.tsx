@@ -49,12 +49,13 @@ function Navbar() {
         </button>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-0.5 overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none]">
+          <style>{`nav[scrollbar-width\\:none]::-webkit-scrollbar { display: none; }`}</style>
           {navLinks.map((link) => (
             <button
               key={link.id}
               onClick={() => scrollToSection(link.id)}
-              className="rounded-full px-3 py-1.5 text-sm font-medium text-graphite/80 hover:bg-sand/40 hover:text-graphite transition-colors"
+              className="whitespace-nowrap rounded-full px-2.5 py-1.5 text-xs font-medium text-graphite/80 hover:bg-sand/40 hover:text-graphite transition-colors"
             >
               {link.label}
             </button>
