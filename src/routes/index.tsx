@@ -294,6 +294,114 @@ function Index() {
           </div>
         </div>
       </section>
+
+      {/* Как да помогнеш като шофьор? */}
+      <section
+        id="kak-da-pomognesh"
+        className="relative bg-background py-20 md:py-28"
+      >
+        <div className="mx-auto max-w-4xl px-4 md:px-6">
+          <h2 className="font-display text-3xl font-bold leading-tight text-graphite md:text-4xl lg:text-5xl">
+            Няколко секунди внимание могат да означават цял един живот.
+          </h2>
+
+          <div className="mt-10 space-y-4">
+            {[
+              {
+                icon: <Gauge size={24} />,
+                text: "Намали скоростта в участъци близо до водоеми, гори, поля и покрайнините на населени места.",
+              },
+              {
+                icon: <CloudRain size={24} />,
+                text: "Бъди особено внимателен през пролетта, лятото, след дъжд и в топли вечери.",
+              },
+              {
+                icon: <Car size={24} />,
+                text: "Ако видиш животно на пътя — намали и го заобиколи, вместо да преминеш през него.",
+              },
+              {
+                icon: <ShieldAlert size={24} />,
+                text: "Не докосвай змии или непознати животни, ако не знаеш как да реагираш безопасно.",
+              },
+              {
+                icon: <PhoneCall size={24} />,
+                text: "Ако забележиш животно в опасност, потърси компетентна организация за помощ.",
+              },
+              {
+                icon: <MessageCircle size={24} />,
+                text: "Говори с децата в колата за уважение към живите същества.",
+              },
+            ].map((tip, idx) => (
+              <div
+                key={idx}
+                className="flex items-start gap-4 rounded-2xl bg-card p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <div className="mt-0.5 shrink-0 text-forest">{tip.icon}</div>
+                <p className="text-base leading-relaxed text-graphite/85">
+                  {tip.text}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => scrollToSection("materiali")}
+              className="inline-flex items-center justify-center rounded-full bg-forest px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-forest/20 transition-all hover:-translate-y-0.5 hover:bg-forest-light hover:shadow-xl hover:shadow-forest/25 focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2"
+            >
+              Виж пълните съвети
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Млади посланици на пътната екология */}
+      <section
+        id="poslanitsi"
+        className="relative bg-sand/20 py-20 md:py-28"
+      >
+        <div className="mx-auto max-w-5xl px-4 md:px-6">
+          <h2 className="font-display text-3xl font-bold leading-tight text-graphite md:text-4xl lg:text-5xl">
+            Кампанията расте с всеки млад човек, който се включи.
+          </h2>
+          <p className="mt-5 text-lg leading-relaxed text-graphite/85 md:text-xl">
+            Не е нужно да си биолог или еколог, за да помогнеш. Търсим млади
+            хора, които искат да участват — по свой начин, със своите умения и
+            интереси.
+          </p>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { label: "Автор", icon: <PenTool size={20} /> },
+              { label: "Художник", icon: <Palette size={20} /> },
+              { label: "Младежки репортер", icon: <Mic size={20} /> },
+              { label: "Участник в подкаста", icon: <Headphones size={20} /> },
+              { label: "Помощник при събития", icon: <HandHelping size={20} /> },
+              { label: "Разпространител", icon: <Share2 size={20} /> },
+              { label: "Посланик", icon: <Award size={20} /> },
+            ].map((role, idx) => (
+              <div
+                key={idx}
+                className="flex items-center gap-3 rounded-2xl bg-card p-4 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <div className="shrink-0 text-forest">{role.icon}</div>
+                <span className="text-base font-medium text-graphite/90">
+                  {role.label}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => scrollToSection("vkluchi-se")}
+              className="inline-flex items-center justify-center rounded-full bg-forest px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-forest/20 transition-all hover:-translate-y-0.5 hover:bg-forest-light hover:shadow-xl hover:shadow-forest/25 focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2"
+            >
+              Стани посланик
+            </button>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
