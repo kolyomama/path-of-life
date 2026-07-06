@@ -1,5 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import {
+  Gauge,
+  CloudRain,
+  Car,
+  ShieldAlert,
+  PhoneCall,
+  MessageCircle,
+  PenTool,
+  Palette,
+  Mic,
+  Headphones,
+  HandHelping,
+  Share2,
+  Award,
+} from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
