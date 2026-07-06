@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -198,6 +199,83 @@ function Index() {
               внимание на пътя може да спаси нечий живот — и че това внимание
               може да тръгне именно от младите хора.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Гласът на животните */}
+      <section
+        id="glasat-na-zhivotnite"
+        className="relative bg-sand/20 py-20 md:py-28"
+      >
+        <div className="mx-auto max-w-5xl px-4 md:px-6">
+          <h2 className="font-display text-3xl font-bold leading-tight text-graphite md:text-4xl lg:text-5xl">
+            Ако можеха да проговорят, какво щяха да ни кажат?
+          </h2>
+          <p className="mt-5 text-lg leading-relaxed text-graphite/85 md:text-xl">
+            Помолихме млади пишещи таланти да направят нещо необичайно: да
+            разкажат историята на пътя през очите на самите животни. Всеки разказ
+            е написан от името на костенурка, жаба, гущер, змия или друго
+            същество, което среща пътя на своя път — и е придружен от авторска
+            илюстрация и кратък експертен факт, който обяснява какво стои зад
+            историята.
+          </p>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: "Бавният път на костенурката",
+                fact: "Костенурките се движат бавно, но сигурно. За тях всяка стъпка на асфалта е риск, защото нямат възможност бързо да избягат от приближаваща кола.",
+                bg: "bg-forest/15",
+              },
+              {
+                title: "След дъжда тръгвам към водата",
+                fact: "Жабите се придвижват към водоемите след дъжд, за да снасят хайвера си. Мокрият асфалт е единственият път, но и най-опасният.",
+                bg: "bg-earth/20",
+              },
+              {
+                title: "Не съм страшна, просто пресичам",
+                fact: "Повечето змии в България са безопасни за хората. Те избягват срещи с нас, но пътищата ги принуждават да излизат на открито.",
+                bg: "bg-sun/25",
+              },
+              {
+                title: "Топлият асфалт не е дом",
+                fact: "Гущерите обичат топлината, но асфалтът може да достигне опасни температури. Понякога ги виждаме на пътя просто защото търсят слънце.",
+                bg: "bg-forest/10",
+              },
+            ].map((card, idx) => {
+              const [isOpen, setIsOpen] = useState(false);
+              return (
+                <div
+                  key={idx}
+                  className="group relative rounded-2xl bg-card shadow-sm overflow-hidden transition-all hover:shadow-md cursor-pointer"
+                  onClick={() => setIsOpen((o) => !o)}
+                >
+                  {/* Image placeholder */}
+                  <div className={`aspect-[4/3] ${card.bg} flex items-center justify-center relative overflow-hidden`}>
+                    <span className="font-display text-sm text-graphite/30 tracking-wide">Илюстрация</span>
+                    {/* Fact overlay */}
+                    <div className={`absolute inset-0 bg-forest/90 p-5 flex flex-col justify-center items-center text-center transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'} group-hover:opacity-100`}>
+                      <span className="text-xs font-semibold text-sun uppercase tracking-wider mb-2">Знаеш ли, че…</span>
+                      <p className="text-sm text-white/90 leading-relaxed">{card.fact}</p>
+                    </div>
+                  </div>
+                  {/* Title */}
+                  <div className="p-4">
+                    <h3 className="font-display text-base font-semibold text-graphite text-center">{card.title}</h3>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => scrollToSection("materiali")}
+              className="inline-flex items-center justify-center rounded-full bg-forest px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-forest/20 transition-all hover:-translate-y-0.5 hover:bg-forest-light hover:shadow-xl hover:shadow-forest/25 focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2"
+            >
+              Прочети историите
+            </button>
           </div>
         </div>
       </section>
