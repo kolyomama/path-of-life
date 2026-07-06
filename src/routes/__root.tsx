@@ -14,7 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 
 const navLinks = [
   { label: "Начало", id: "nachalo" },
-  { label: "Защо е важно", id: "zashcho" },
+  { label: "Защо е важно?", id: "zashcho" },
   { label: "Какво правим", id: "kakvo-pravim" },
   { label: "Гласът на животните", id: "glasat-na-zhivotnite" },
   { label: "Как да помогнеш", id: "kak-da-pomognesh" },
