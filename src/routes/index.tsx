@@ -14,6 +14,8 @@ import {
   HandHelping,
   Share2,
   Award,
+  MapPin,
+  Radio,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
