@@ -494,6 +494,172 @@ function Index() {
           </div>
         </div>
       </section>
+
+      {/* Материали за сваляне */}
+      <section
+        id="materiali"
+        className="relative bg-background py-20 md:py-28"
+      >
+        <div className="mx-auto max-w-5xl px-4 md:px-6">
+          <h2 className="font-display text-3xl font-bold leading-tight text-graphite md:text-4xl lg:text-5xl">
+            Библиотека, която остава и след кампанията.
+          </h2>
+          <p className="mt-5 text-lg leading-relaxed text-graphite/85 md:text-xl">
+            Тук ще събираме всичко създадено по проекта — свободно за преглед, споделяне и използване с образователна цел:
+          </p>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                icon: <BookOpen size={22} />,
+                title: "Истории от „Гласът на животните“",
+                desc: "Разкази от името на костенурки, жаби, гущери и змии — за четене и споделяне.",
+              },
+              {
+                icon: <Image size={22} />,
+                title: "Илюстрации на младите автори",
+                desc: "Авторски рисунки към всяка история — готови за печат и дигитално използване.",
+              },
+              {
+                icon: <FileText size={22} />,
+                title: "Флаери и постери за разпространение",
+                desc: "Кратки и запомнящи се послания, които можеш да разпечаташ или споделиш.",
+              },
+              {
+                icon: <Map size={22} />,
+                title: "Образователни карти за видовете и техните маршрути",
+                desc: "Научи кои животни срещаш по пътя, къде се движат и защо.",
+              },
+              {
+                icon: <ShieldAlert size={22} />,
+                title: "Съвети за шофьори в кратък, лесен за печат формат",
+                desc: "Бърз справочник с най-важните неща, които всеки шофьор може да направи.",
+              },
+              {
+                icon: <Users size={22} />,
+                title: "Материали за учители и родители",
+                desc: "Идеи за разговори, занимания и уроци с деца и тийнейджъри по темата.",
+              },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col items-start gap-4 rounded-2xl bg-card p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <div className="shrink-0 text-forest">{item.icon}</div>
+                <div>
+                  <h3 className="font-display text-base font-semibold text-graphite">{item.title}</h3>
+                  <p className="mt-1 text-sm leading-relaxed text-graphite/70">{item.desc}</p>
+                </div>
+                <div className="mt-auto pt-2">
+                  <button
+                    disabled
+                    className="inline-flex items-center gap-2 rounded-full bg-forest/20 px-4 py-2 text-sm font-semibold text-forest cursor-not-allowed opacity-70"
+                  >
+                    <Download size={16} />
+                    Свали (скоро)
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <button
+              disabled
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-forest/40 px-8 py-3.5 text-base font-semibold text-white shadow-sm cursor-not-allowed"
+            >
+              <BookOpen size={20} />
+              Разгледай библиотеката
+              <span className="ml-1 text-xs font-normal opacity-80">(скоро)</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Включи се */}
+      <section
+        id="vkluchi-se"
+        className="relative bg-sand/20 py-20 md:py-28"
+      >
+        <div className="mx-auto max-w-5xl px-4 md:px-6">
+          <h2 className="font-display text-3xl font-bold leading-tight text-graphite md:text-4xl lg:text-5xl">
+            Пътят на промяната минава през всички нас.
+          </h2>
+          <p className="mt-5 text-lg leading-relaxed text-graphite/85 md:text-xl">
+            Тази кампания има нужда от много различни хора, за да работи наистина:
+          </p>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                icon: <Users size={20} />,
+                label: "Младежи",
+                desc: "Пиши, рисувай, снимай, споделяй — включи се с това, което умееш.",
+              },
+              {
+                icon: <Users size={20} />,
+                label: "Родители",
+                desc: "Разкажи на децата си за животните на пътя и защо вниманието е важно.",
+              },
+              {
+                icon: <GraduationCap size={20} />,
+                label: "Учители",
+                desc: "Използвай материалите в час или организирай тематична седмица.",
+              },
+              {
+                icon: <Building2 size={20} />,
+                label: "Училища",
+                desc: "Направете кампанията част от училищния живот — събитие, клуб или проект.",
+              },
+              {
+                icon: <HeartHandshake size={20} />,
+                label: "Граждани",
+                desc: "Сподели съветите с приятели и бъди пример за внимание на пътя.",
+              },
+              {
+                icon: <HeartHandshake size={20} />,
+                label: "Партньорски организации",
+                desc: "Обединяваме усилия с НПО, природозащитни групи и местни инициативи.",
+              },
+              {
+                icon: <Building2 size={20} />,
+                label: "Бизнеси",
+                desc: "Подкрепи кампанията като спонсор или разпространи посланията сред служителите си.",
+              },
+            ].map((group, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col items-start gap-3 rounded-2xl bg-card p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <div className="shrink-0 text-forest">{group.icon}</div>
+                <h3 className="font-display text-base font-semibold text-graphite">{group.label}</h3>
+                <p className="text-sm leading-relaxed text-graphite/70">{group.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap">
+            <button
+              disabled
+              className="inline-flex items-center justify-center rounded-full bg-forest px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-forest/20 transition-all hover:-translate-y-0.5 hover:bg-forest-light hover:shadow-xl hover:shadow-forest/25 focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2 cursor-not-allowed opacity-70"
+            >
+              Стани доброволец
+            </button>
+            <button
+              disabled
+              className="inline-flex items-center justify-center rounded-full bg-sun px-8 py-3.5 text-base font-semibold text-graphite shadow-lg shadow-sun/20 transition-all hover:-translate-y-0.5 hover:bg-sun/90 hover:shadow-xl hover:shadow-sun/25 focus:outline-none focus:ring-2 focus:ring-sun focus:ring-offset-2 cursor-not-allowed opacity-70"
+            >
+              Стани партньор
+            </button>
+            <button
+              onClick={() => scrollToSection("materiali")}
+              className="inline-flex items-center justify-center rounded-full border-2 border-forest/30 bg-white/80 px-8 py-3.5 text-base font-semibold text-forest backdrop-blur-sm shadow-md transition-all hover:-translate-y-0.5 hover:bg-white hover:border-forest/50 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2"
+            >
+              Свали материали
+            </button>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
