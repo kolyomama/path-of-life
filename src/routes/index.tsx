@@ -16,6 +16,15 @@ import {
   Award,
   MapPin,
   Radio,
+  BookOpen,
+  Download,
+  FileText,
+  Image,
+  Map,
+  Users,
+  GraduationCap,
+  Building2,
+  HeartHandshake,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
