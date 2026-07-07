@@ -14,6 +14,8 @@ import {
   HandHelping,
   Share2,
   Award,
+  MapPin,
+  Radio,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -398,6 +400,87 @@ function Index() {
               className="inline-flex items-center justify-center rounded-full bg-forest px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-forest/20 transition-all hover:-translate-y-0.5 hover:bg-forest-light hover:shadow-xl hover:shadow-forest/25 focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2"
             >
               Стани посланик
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Интервюта и подкаст */}
+      <section
+        id="podkast"
+        className="relative bg-background py-20 md:py-28"
+      >
+        <div className="mx-auto max-w-4xl px-4 md:px-6">
+          <h2 className="font-display text-3xl font-bold leading-tight text-graphite md:text-4xl lg:text-5xl">
+            Разговори, които обясняват пътя от друга гледна точка.
+          </h2>
+          <p className="mt-5 text-lg leading-relaxed text-graphite/85 md:text-xl">
+            Тук ще намираш кратки интервюта с експерти и епизоди на подкаста на
+            кампанията — на ясен и достъпен език, без сложна терминология.
+          </p>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+            {[
+              "Какво всъщност е „пътна екология“?",
+              "Защо земноводните и влечугите са толкова уязвими точно на пътя?",
+              "Какво трябва да знае всеки шофьор?",
+              "Митове и истини за змиите и гущерите.",
+              "Как младите хора могат реално да помагат на природата около себе си?",
+            ].map((topic, idx) => (
+              <div
+                key={idx}
+                className="flex items-start gap-4 rounded-2xl bg-card p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <div className="mt-1 shrink-0 text-forest">
+                  <Radio size={20} />
+                </div>
+                <p className="text-base leading-relaxed text-graphite/85 font-medium">
+                  {topic}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <button
+              disabled
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-forest/40 px-8 py-3.5 text-base font-semibold text-white shadow-sm cursor-not-allowed"
+            >
+              <Headphones size={20} />
+              Слушай подкаста
+              <span className="ml-1 text-xs font-normal opacity-80">(скоро)</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Кампанията в града */}
+      <section
+        id="kampaniyata-v-grada"
+        className="relative bg-sand/20 py-20 md:py-28"
+      >
+        <div className="mx-auto max-w-4xl px-4 md:px-6">
+          <h2 className="font-display text-3xl font-bold leading-tight text-graphite md:text-4xl lg:text-5xl">
+            От екрана — на улицата.
+          </h2>
+
+          <div className="mt-8 space-y-5 text-lg leading-relaxed text-graphite/85 md:text-xl md:leading-relaxed">
+            <p>
+              „Пътят не е само за хора“ не остава само онлайн. Кампанията ще
+              достигне до хората и на живо — чрез флаери, стикери и картички с
+              QR кодове, които водят право към сайта, чрез информационни
+              материали, поставени на подходящи обществени места, и чрез събитие
+              с младежи доброволци.
+            </p>
+          </div>
+
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => scrollToSection("materiali")}
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-forest px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-forest/20 transition-all hover:-translate-y-0.5 hover:bg-forest-light hover:shadow-xl hover:shadow-forest/25 focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2"
+            >
+              <MapPin size={20} />
+              Виж къде ни срещаш
             </button>
           </div>
         </div>
