@@ -660,6 +660,111 @@ function Index() {
           </div>
         </div>
       </section>
+
+      {/* За нас */}
+      <section id="za-nas" className="scroll-mt-24 bg-sand/30 py-20 md:py-28">
+        <div className="mx-auto max-w-4xl px-4 md:px-6">
+          <span className="inline-block rounded-full bg-forest/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-forest">
+            За нас
+          </span>
+          <h2 className="mt-5 font-display text-3xl font-bold leading-tight text-graphite md:text-4xl lg:text-5xl">
+            Фондация „Шанс за децата и природата на България“ и Център за млади таланти – Бургас
+          </h2>
+          <p className="mt-6 text-lg leading-relaxed text-graphite/80">
+            От години работим с талантливи деца и младежи в областта на науката, изкуството, литературата, образованието и обществените каузи. Вярваме, че младите хора не просто могат да учат за света около себе си — те могат активно да го променят към по-добро, когато им дадем възможност, доверие и подходяща среда.
+          </p>
+          <p className="mt-4 text-lg leading-relaxed text-graphite/80">
+            „Пътят не е само за хора“ е естествено продължение на тази работа: тук творчеството среща природозащитата, а младежката енергия се превръща в реална обществена промяна.
+          </p>
+        </div>
+      </section>
+
+      {/* Footer / Контакти */}
+      <footer id="kontakti" className="scroll-mt-24 bg-graphite text-white/90">
+        <div className="mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-20">
+          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+            <div className="lg:col-span-2">
+              <div className="flex items-center gap-3">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-forest font-display text-xl font-bold text-white">
+                  ПНХ
+                </div>
+                <div className="font-display text-lg font-semibold leading-tight text-white">
+                  Пътят не е<br />само за хора
+                </div>
+              </div>
+              <p className="mt-5 text-sm leading-relaxed text-white/70">
+                Фондация „Шанс за децата и природата на България“ × Център за млади таланти – Бургас
+              </p>
+              <div className="mt-5 flex gap-3">
+                {[
+                  { label: "Facebook", d: "M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.5-3.9 3.78-3.9 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12z" },
+                  { label: "Instagram", d: "M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.72 3.72 0 0 1-.9 1.38 3.72 3.72 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 5.6a4.2 4.2 0 1 0 0 8.4 4.2 4.2 0 0 0 0-8.4zm0 6.93a2.73 2.73 0 1 1 0-5.46 2.73 2.73 0 0 1 0 5.46zm5.35-7.1a.98.98 0 1 1-1.96 0 .98.98 0 0 1 1.96 0z" },
+                  { label: "YouTube", d: "M23.5 6.2a3 3 0 0 0-2.1-2.12C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.58A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.12c1.9.58 9.4.58 9.4.58s7.5 0 9.4-.58a3 3 0 0 0 2.1-2.12C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z" },
+                  { label: "TikTok", d: "M19.6 6.7a5.6 5.6 0 0 1-3.4-1.15 5.6 5.6 0 0 1-2.15-3.55h-3.2v12.3a2.6 2.6 0 1 1-1.85-2.5V8.55a5.85 5.85 0 1 0 5.05 5.8V9.6a8.8 8.8 0 0 0 5.55 1.95V8.35a5.5 5.5 0 0 1 0-1.65z" },
+                ].map((s) => (
+                  <a
+                    key={s.label}
+                    href="#"
+                    aria-label={s.label}
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-forest"
+                  >
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                      <path d={s.d} />
+                    </svg>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="font-display text-base font-semibold text-white">Контакти</h3>
+              <ul className="mt-4 space-y-3 text-sm text-white/70">
+                <li>
+                  <span className="block text-xs uppercase tracking-wider text-white/50">Имейл</span>
+                  <a href="mailto:info@example.bg" className="transition-colors hover:text-white">
+                    info@example.bg
+                  </a>
+                </li>
+                <li>
+                  <span className="block text-xs uppercase tracking-wider text-white/50">Телефон</span>
+                  <a href="tel:+359000000000" className="transition-colors hover:text-white">
+                    +359 000 000 000
+                  </a>
+                </li>
+                <li>
+                  <span className="block text-xs uppercase tracking-wider text-white/50">Град</span>
+                  Бургас, България
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-display text-base font-semibold text-white">
+                Партньори и финансиращи организации
+              </h3>
+              <div className="mt-4 grid grid-cols-2 gap-3">
+                {[1, 2, 3, 4].map((i) => (
+                  <div
+                    key={i}
+                    className="flex h-16 items-center justify-center rounded-lg bg-white/10 text-xs text-white/50"
+                  >
+                    Лого {i}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-14 border-t border-white/10 pt-8">
+            <p className="max-w-4xl text-xs leading-relaxed text-white/60">
+              Всички текстове, илюстрации и материали в този сайт са създадени в рамките на кампанията „Пътят не е само за хора“. Могат да бъдат използвани свободно с образователна цел, при коректно посочване на източника.
+            </p>
+            <p className="mt-4 text-xs text-white/40">
+              © {new Date().getFullYear()} Пътят не е само за хора. Всички права запазени.
+            </p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
